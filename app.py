@@ -29,7 +29,7 @@ def add():
 
         # Append the new post to the list
         new_post = {
-            'id': len(blog_posts) + 1,  
+            'id': len(blog_posts) + 1,
             'author': author,
             'title': title,
             'content': content
@@ -41,6 +41,20 @@ def add():
             json.dump(blog_posts, json_file, indent=4)
         return redirect(url_for('index'))
     return render_template('add.html')
+
+
+@app.route('/delete/<int:post_id>', methods=['POST'])
+def delete(post_id):
+    global blog_posts
+    new_posts = []
+    for post in blog_posts:
+        if post['id'] != post_id:
+            new_posts.append(post)
+    blog_posts = new_posts
+
+    with open('data.json', 'w') as json_file:
+        json.dump(blog_posts, json_file, indent=4)
+    return redirect(url_for('index'))
 
 
 if __name__ == '__main__':
