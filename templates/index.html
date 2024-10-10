@@ -15,10 +15,17 @@
                 <h3>by {{ post.author }}</h3>
                 <p>{{ post.content }}</p>
 
+               <div class="post-buttons">
                 <!-- Delete Button -->
                 <form action="/delete/{{ post.id }}" method="POST">
                     <button  id = "delete" type="submit" style="display:inline;">Delete</button>
                 </form>
+
+                <!-- Delete Button -->
+                <form action="/update/{{ post.id }}" method="GET">
+                    <button type="submit" style="display:inline;">Update</button>
+                </form>
+               </div>
         </div>
         {% endfor %}
         <a href="/add">Add New Post</a>
