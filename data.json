@@ -10,5 +10,11 @@
         "author": "Jane Doe",
         "title": "Second Post",
         "content": "This is another post."
+    },
+    {
+        "id": 3,
+        "author": "John Doe",
+        "title": "test",
+        "content": "linked the add method to the home page"
     }
 ]
