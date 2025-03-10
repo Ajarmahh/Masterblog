@@ -2,8 +2,7 @@
 
 Welcome to **MasterBlog**! This is a full-stack blogging platform where users can create, edit, and share blog posts with a seamless and user-friendly interface.  
 
-## 🚀 Features  
-- 🔗 **User Authentication & Authorization** – Secure login and user access control with JWT.  
+## 🚀 Features    
 - 📓 **Rich Text Editor** – Create, edit, and format blog posts effortlessly.  
 - 🔄 **CRUD Functionality** – Manage blog posts with full Create, Read, Update, and Delete capabilities.  
 - 💳 **SEO Optimization** – Meta tags and friendly URLs for improved discoverability.  
